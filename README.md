@@ -1,6 +1,6 @@
 # Pilot Job Scraper & Telegram Notifier
 
-> From the desk of a Senior Backend Engineer: this repo is small, ruthless, and gets the job done — it scrapes a careers page and pings you on Telegram when something interesting for pilots shows up. It's opinionated, slightly arrogant, and reliable when treated with respect.
+> From the desk of a  Backend Engineer: this repo is small, ruthless, and gets the job done — it scrapes a careers page and pings you on Telegram when something interesting for pilots shows up. It's opinionated, slightly arrogant, and reliable when treated with respect.
 
 ---
 
