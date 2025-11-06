@@ -25,7 +25,7 @@ async def main():
     for job in jobs:
         text = job.get_text(strip=True)
         text_lower = text.lower()
-        if "adjunct professor" in text_lower and "aircraft systems" in text_lower:
+        if "Pilot trainee" in text_lower and "aircraft maintenance" in text_lower:
             link = job.get("href")
             message = f"🚀 New Job Found!\n{text}\nLink: {link}"
             await send_message(message)
