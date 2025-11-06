@@ -33,7 +33,7 @@ async def main():
             found_any = True
 
     if not found_any:
-        print("No Pilot Trainee jobs found today.")
+        print("No Pilot Trainee or aircraft maintenance jobs found today.")
         await send_message("ℹ️ No Pilot Trainee jobs found today.")
 
 # Run the async main function
