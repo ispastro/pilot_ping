@@ -8,7 +8,13 @@ load_dotenv()
 TOKEN = os.getenv("BOT_TOKEN")
 CHAT_ID = os.getenv("CHAT_ID")
 
-bot = Bot(token=TOKEN)
+if not TOKEN or not CHAT_ID:
+    print("⚠️ Warning: BOT_TOKEN or CHAT_ID not set!")
+
+bot = Bot(token=TOKEN) if TOKEN else None
 
 async def send_message(message: str):
-    await bot.send_message(chat_id=CHAT_ID, text=message)
+    if bot and CHAT_ID:
+        await bot.send_message(chat_id=CHAT_ID, text=message)
+    else:
+        print(f"[Bot disabled] Would send: {message}")
