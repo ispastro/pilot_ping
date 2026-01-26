@@ -29,7 +29,7 @@ def run_scraper():
 
 # Initialize scheduler
 scheduler = BackgroundScheduler()
-scheduler.add_job(run_scraper, 'cron', day_of_week='sun,mon,wed,fri', hour=9, minute=0)
+scheduler.add_job(run_scraper, 'cron', day_of_week='mon,wed,fri', hour=9, minute=0)
 scheduler.start()
 
 print("🛰 Scheduler started. Waiting for the next mission...")
