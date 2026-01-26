@@ -37,7 +37,7 @@ Never miss a pilot opportunity again. This lightweight Python service continuous
   📊 Summary: 1 matching jobs out of 100 links
 ============================================================
 ```
-
+![alt text](image.png)
 ---
 
 ## ✨ Features
@@ -257,16 +257,6 @@ graph LR
 2. This keeps the free tier service alive 24/7
 
 </details>
-
----
-
-## 📈 Roadmap
-
-- [ ] Add job deduplication (SQLite/Redis)
-- [ ] Support multiple airline career pages
-- [ ] Email notifications option
-- [ ] Web dashboard for job history
-- [ ] Docker containerization
 
 ---
 
