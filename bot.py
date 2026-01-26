@@ -15,6 +15,6 @@ bot = Bot(token=TOKEN) if TOKEN else None
 
 async def send_message(message: str):
     if bot and CHAT_ID:
-        await bot.send_message(chat_id=CHAT_ID, text=message)
+        await bot.send_message(chat_id=CHAT_ID, text=message, parse_mode='Markdown')
     else:
         print(f"[Bot disabled] Would send: {message}")

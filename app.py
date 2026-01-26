@@ -3,8 +3,10 @@ import threading
 from flask import Flask, jsonify
 from apscheduler.schedulers.background import BackgroundScheduler
 from scrapper import main
+from datetime import datetime
 
 app = Flask(__name__)
+last_run = None
 
 # Health check route for Render
 @app.route('/')
@@ -21,11 +23,21 @@ def ping():
 
 @app.route('/health')
 def health():
-    return jsonify({"status": "healthy"})
+    return jsonify({
+        "status": "healthy",
+        "last_run": last_run.isoformat() if last_run else "Never"
+    })
+
+@app.route('/run-now')
+def trigger_scraper():
+    threading.Thread(target=run_scraper).start()
+    return jsonify({"status": "triggered", "message": "Scraper started manually"})
 
 # Run the async scraper in a sync context
 def run_scraper():
+    global last_run
     asyncio.run(main())
+    last_run = datetime.now()
 
 # Initialize scheduler
 scheduler = BackgroundScheduler()
