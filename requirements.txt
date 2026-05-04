@@ -1,7 +1,5 @@
 requests
 beautifulsoup4
-python-telegram-bot
 python-dotenv
-APScheduler
-flask
-gunicorn
+supabase
+httpx
